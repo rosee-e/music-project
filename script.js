@@ -316,9 +316,6 @@ const descriptionElement = document.getElementById("eventDescription");
 const locationElement = document.getElementById("location");
 const categoryElement = document.getElementById("category");
 
-const whyElement = document.getElementById("whyItMatters");
-const sourcesElement = document.getElementById("sources");
-
 const timelineElement = document.getElementById("timeline");
 const currentTimelineYearElement =
     document.getElementById("currentTimelineYear");
@@ -368,9 +365,6 @@ function updateTimeline(year) {
 
     categoryElement.textContent = data.category;
 
-    whyElement.textContent = data.why;
-
-    sourcesElement.textContent = data.sources;
 
 
     /* Update artwork */
