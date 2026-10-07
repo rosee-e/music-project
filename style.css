@@ -1,273 +1,143 @@
-/* ---------- General ---------- */
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    min-height: 100vh;
-    font-family: Arial, Helvetica, sans-serif;
-    background:
-        radial-gradient(circle at top left, #242424, #121212 45%, #080808);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-}
-
-
-/* ---------- Main Player ---------- */
-
-.player {
-    width: 100%;
-    max-width: 1200px;
-    background: #181818;
-    border-radius: 18px;
-    padding: 40px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-
-    display: grid;
-    grid-template-columns: minmax(350px, 1fr) minmax(350px, 1fr);
-    gap: 50px;
-    align-items: center;
-}
-
-
-/* ---------- Artwork ---------- */
-
-.artwork {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    border-radius: 12px;
-    overflow: hidden;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: linear-gradient(135deg, #333333, #111111);
-
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
-}
-
-.artwork-year {
-    font-size: clamp(80px, 12vw, 170px);
-    font-weight: 800;
-    letter-spacing: -6px;
-    color: rgba(255, 255, 255, 0.9);
-}
-
-.artwork-placeholder {
-    color: #888;
-    font-size: 14px;
-}
-
-
-/* ---------- Information ---------- */
-
-.info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-width: 0;
-}
-
-#year {
-    font-size: 72px;
-    font-weight: 800;
-    line-height: 0.9;
-    margin-bottom: 20px;
-    letter-spacing: -4px;
-}
-
-#eventTitle {
-    font-size: clamp(28px, 3vw, 44px);
-    line-height: 1.05;
-    margin: 0 0 18px 0;
-}
-
-#eventDescription {
-    font-size: 17px;
-    line-height: 1.6;
-    color: #cfcfcf;
-    margin-bottom: 24px;
-    max-width: 600px;
-}
-
-
-/* ---------- Metadata ---------- */
-
-.metadata {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-bottom: 35px;
-}
-
-.metadata span {
-    background: #2a2a2a;
-    color: #bdbdbd;
-    padding: 7px 12px;
-    border-radius: 20px;
-    font-size: 13px;
-}
-
-
-/* ---------- Controls ---------- */
-
-.controls {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 25px;
-    margin-bottom: 25px;
-}
-
-.control-button {
-    border: none;
-    background: none;
-    color: white;
-    font-size: 25px;
-    cursor: pointer;
-    transition: transform 0.15s ease, color 0.15s ease;
-}
-
-.control-button:hover {
-    transform: scale(1.12);
-    color: #1ed760;
-}
-
-#playButton {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    border: none;
-
-    background: #1ed760;
-    color: black;
-
-    font-size: 24px;
-    cursor: pointer;
+<!DOCTYPE html>
+<html lang="en">
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    transition: transform 0.15s ease;
-}
-
-#playButton:hover {
-    transform: scale(1.08);
-}
-
-
-/* ---------- Timeline ---------- */
-
-.timeline {
-    width: 100%;
-}
-
-.timeline-labels {
-    display: flex;
-    justify-content: space-between;
-    color: #888;
-    font-size: 13px;
-    margin-bottom: 8px;
-}
-
-#currentTimelineYear {
-    color: white;
-    font-weight: bold;
-}
-
-#timeline {
-    width: 100%;
-    cursor: pointer;
-    accent-color: #1ed760;
-}
-
-
-/* ---------- Fade Animation ---------- */
-
-.fade {
-    animation: fadeIn 0.25s ease;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(4px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-/* ---------- Mobile ---------- */
-
-@media (max-width: 800px) {
-
-    body {
-        padding: 20px;
-        align-items: flex-start;
-    }
-
-    .player {
-        grid-template-columns: 1fr;
-        gap: 30px;
-        padding: 25px;
-    }
-
-    .artwork {
-        max-width: 500px;
-        margin: 0 auto;
-    }
-
-    #year {
-        font-size: 56px;
-    }
-
-    #eventTitle {
-        font-size: 32px;
-    }
-
-    #eventDescription {
-        font-size: 16px;
-    }
-
-    .controls {
-        margin-top: 10px;
-    }
-}
-
-
-/* ---------- Small Phones ---------- */
-
-@media (max-width: 500px) {
-
-    body {
-        padding: 10px;
-    }
-
-    .player {
-        padding: 20px;
-        border-radius: 12px;
-    }
-
-    #year {
-        font-size: 48px;
-    }
-
-    #eventTitle {
-        font-size: 27px;
-    }
-
-    .artwork-year {
-        font-size: 90px;
-    }
-}
+    <title>The Exponents — 1981–2001</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="player">
+
+        <!-- Album artwork / main visual -->
+        <section class="artwork-section">
+
+            <div class="artwork" id="artwork">
+
+                <div class="artwork-year" id="artworkYear">
+                    1981
+                </div>
+
+                <div class="artwork-placeholder">
+                    <span>THE</span>
+                    <strong>EXPONENTS</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Information -->
+        <section class="information">
+
+            <div class="year" id="year">
+                1981
+            </div>
+
+            <div class="event-title" id="eventTitle">
+                Dance Exponents form in Christchurch
+            </div>
+
+            <div class="event-description" id="eventDescription">
+                The band forms in Christchurch, beginning the story that
+                would eventually lead to some of New Zealand's best-known
+                rock songs.
+            </div>
+
+            <div class="metadata">
+
+                <span id="location">
+                    CHRISTCHURCH, NEW ZEALAND
+                </span>
+
+                <span>•</span>
+
+                <span id="category">
+                    FORMATION
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- Player controls -->
+        <section class="controls">
+
+            <button
+                class="control-button"
+                id="previousButton"
+                aria-label="Previous"
+            >
+                ⏮
+            </button>
+
+            <button
+                class="play-button"
+                id="playButton"
+                aria-label="Play"
+            >
+                ▶
+            </button>
+
+            <button
+                class="control-button"
+                id="nextButton"
+                aria-label="Next"
+            >
+                ⏭
+            </button>
+
+        </section>
+
+
+        <!-- Timeline -->
+        <section class="timeline-section">
+
+            <div class="timeline-labels">
+
+                <span>1981</span>
+
+                <span id="currentTimelineYear">
+                    1981
+                </span>
+
+                <span>2001</span>
+
+            </div>
+
+            <input
+                type="range"
+                id="timeline"
+                min="1981"
+                max="2001"
+                value="1981"
+                step="1"
+            >
+
+        </section>
+
+
+        <!-- Bottom branding -->
+        <footer>
+
+            <div>THE EXPONENTS</div>
+
+            <div>1981 — 2001</div>
+
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
