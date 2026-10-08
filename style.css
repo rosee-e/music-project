@@ -182,19 +182,6 @@ body {
 
     letter-spacing: 0.5px;
 }
-
-.metadata span:first-child,
-.metadata span:last-child {
-    background: #2a2a2a;
-
-    color: #bdbdbd;
-
-    padding: 7px 12px;
-
-    border-radius: 20px;
-}
-
-
 /* ---------- Controls ---------- */
 
 .controls {
