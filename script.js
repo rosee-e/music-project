@@ -313,9 +313,6 @@ const artworkYearElement = document.getElementById("artworkYear");
 const titleElement = document.getElementById("eventTitle");
 const descriptionElement = document.getElementById("eventDescription");
 
-const locationElement = document.getElementById("location");
-const categoryElement = document.getElementById("category");
-
 const timelineElement = document.getElementById("timeline");
 const currentTimelineYearElement =
     document.getElementById("currentTimelineYear");
@@ -360,12 +357,6 @@ function updateTimeline(year) {
     titleElement.textContent = data.title;
 
     descriptionElement.textContent = data.description;
-
-    locationElement.textContent = data.location;
-
-    categoryElement.textContent = data.category;
-
-
 
     /* Update artwork */
 
