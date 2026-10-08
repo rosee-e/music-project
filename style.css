@@ -160,28 +160,6 @@ body {
     margin-bottom: 24px;
 }
 
-
-/* ---------- Metadata ---------- */
-
-.metadata {
-    display: flex;
-
-    align-items: center;
-
-    gap: 10px;
-
-    flex-wrap: wrap;
-
-    margin-bottom: 25px;
-}
-
-.metadata span {
-    color: #aaa;
-
-    font-size: 13px;
-
-    letter-spacing: 0.5px;
-}
 /* ---------- Controls ---------- */
 
 .controls {
