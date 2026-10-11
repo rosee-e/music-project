@@ -1,10 +1,10 @@
 
-/* =========================================
+/* 
    THE EXPONENTS — 1981–2002
    Main JavaScript
-   ========================================= */
+ */
 
-/* ---------- Timeline data ---------- */
+/* Timeline data */
 
 const timelineData = [
     {
@@ -16,13 +16,13 @@ const timelineData = [
     {
         year: 1981,
         title: "The first gig — 15 October",
-        description: "The band plays its first gig at Christchurch’s Hillsborough Tavern on Jordan Luck’s 20th birthday and Steve Cowan’s 22nd birthday. (The Exponents, n.d.-b)",
+        description: "The band plays its first gig only a week later at Christchurch’s Hillsborough Tavern on Jordan Luck’s 20th birthday and Steve Cowan’s 22nd birthday. (The Exponents, n.d.-b)",
         background: "linear-gradient(135deg, #493b31, #15100d)"
     },
     {
         year: 1981,
         title: "Aranui Tavern residency",
-        description: "Dance Exponents secure a residency at the Aranui Tavern in Christchurch, which Brown (2013) describes as having “created a sensation.”",
+        description: "Dance Exponents secure a residency at the Aranui Tavern in Christchurch, quoted by Brown (2013) describes as having “created a sensation.”"
         background: "linear-gradient(135deg, #3b493b, #101510)"
     },
     {
@@ -34,7 +34,7 @@ const timelineData = [
     {
         year: 1982,
         title: "“Victoria” released",
-        description: "The band releases its debut single, “Victoria,” a song about an abusive relationship. (Brown, 2013)",
+        description: "The band releases its debut single, “Victoria,” a song that tells the story of an abusive relationship. (Brown, 2013)",
         background: "linear-gradient(135deg, #493b31, #15100d)"
     },
     {
@@ -52,19 +52,13 @@ const timelineData = [
     {
         year: 1982,
         title: "Steve Cowan leaves",
-        description: "Steve Cowan leaves the band and returns to Timaru. Martin Morris temporarily replaces him. (Brown, 2013)",
+        description: "Steve Cowan leaves the band and returns to Timaru and is temporarily replaced by Martin Morris. (Brown, 2013)",
         background: "linear-gradient(135deg, #403b4a, #121116)"
-    },
-    {
-        year: 1982,
-        title: "“Airway Spies”",
-        description: "The band releases “Airway Spies” following Cowan’s departure, marking an early change in the group’s lineup and sound. (The Exponents, n.d.-b)",
-        background: "linear-gradient(135deg, #293c46, #0d1215)"
     },
     {
         year: 1983,
         title: "Playing with David Bowie",
-        description: "Dance Exponents support David Bowie at Western Springs in Auckland, at a concert recognised as the largest concert crowd in New Zealand history. (Brown, 2013)",
+        description: "Dance Exponents support David Bowie at Western Springs in Auckland, at a concert recognized as the largest concert crowd in New Zealand history. (Brown, 2013)",
         background: "linear-gradient(135deg, #303b49, #0b0e12)"
     },
     {
@@ -88,13 +82,13 @@ const timelineData = [
     {
         year: 1984,
         title: "“Sex and Agriculture”",
-        description: "Second guitarist Chris Sheehan joins the band. His first recording with the group is the darker single “Sex and Agriculture,” released in August. (Brown, 2013)",
+        description: "Following a string of singles that failed to break the top 10 in the charts, second guitarist Chris Sheehan joins the band and contributes to a new, darker single ‘Sex and Agriculture’ which sees good domestic success (Brown, 2013). ",
         background: "linear-gradient(135deg, #493b31, #15100d)"
     },
     {
         year: 1985,
         title: "Personnel changes",
-        description: "Michael “Harry” Harallambi is dismissed from the band after the 1984 awards period. The group goes through several drummer changes, and the decision to remove Harallambi is later regarded by the band as a mistake. (Brown, 2013)",
+        description: "Michael “Harry” Harallambi is ejected from the band. The group goes through several drummer changes, and the decision to remove Harallambi is later regarded by the band as a mistake. (Brown, 2013)",
         background: "linear-gradient(135deg, #403b4a, #121116)"
     },
     {
@@ -106,7 +100,7 @@ const timelineData = [
     {
         year: 1986,
         title: "Amplifier",
-        description: "The band releases its third studio album, Amplifier. It receives a more moderate response than Prayers Be Answered, and drummer Eddie Olson later leaves the group. (The Exponents, n.d.-b)",
+        description: "The band releases their third studio album “Amplifier,” which sees only a moderate response. Eddie Olson (one of the many drummers) leaves due to this. (The Exponents, n.d.)",
         background: "linear-gradient(135deg, #3e4930, #10130c)"
     },
     {
@@ -118,31 +112,32 @@ const timelineData = [
     {
         year: "1987–1990",
         title: "The struggle in Britain",
-        description: "The band struggles to establish itself in Britain, playing to New Zealand expatriate communities and taking day jobs to survive. The UK period lasts around four frustrating years. (Brown, 2013; The Exponents, n.d.-b)",
+        description: "The band struggles to establish itself in Britain, playing to New Zealand expat communities and taking day jobs to survive. The UK period lasts around four frustrating years. (Brown, 2013; The Exponents, n.d.-b) International critical reception of NZ bands like this was a common theme in 1980s rock music (Biron & Gibson, 2023).",
         background: "linear-gradient(135deg, #443e38, #12100e)"
     },
     {
         year: "1987–1990",
-        title: "A missed record deal",
-        description: "CBS Records shows interest after hearing the band’s demos and performances. A showcase for A&R director Muff Winwood goes badly; Brown writes that “the sound was messy and so was Luck” (2013, para. 16), and CBS signs another band instead.",
+        title: "What could have been",
+        description: "CBS records (now Sony) show interest in signing after hearing their demos and performances. They perform a showcase to CBS A&R director Muff Winwood. The “sound was messy and so was Luck” (Brown,  2013, para. 16), resulting in the record going to a different band instead (The Exponents, n.d.)
+",
         background: "linear-gradient(135deg, #453936, #120d0b)"
     },
     {
         year: 1990,
         title: "The band returns",
-        description: "After several difficult years in Britain, the band returns to New Zealand following interest from PolyGram Records. (Brown, 2013)",
+        description: "Aftera rough few years in Britain, the band returns to New Zealand following interest from PolyGram Records. (Brown, 2013)",
         background: "linear-gradient(135deg, #314339, #0c120e)"
     },
     {
         year: 1990,
         title: "The band reunites",
-        description: "Four original members reunite, including drummer Michael “Harry” Harallambi. (The Exponents, n.d.-b)",
+        description: "Four original members reunite, including previously ejected drummer Michael “Harry” Harallambi. (The Exponents, n.d.-b)",
         background: "linear-gradient(135deg, #39432e, #0d1209)"
     },
     {
         year: 1990,
-        title: "A name-change misstep",
-        description: "The band briefly changes its name to Amplifier and tours New Zealand, but audiences do not recognise the new name and the tour struggles. The group changes its name back to The Exponents. (The Exponents, n.d.-b)",
+        title: "A terrible idea",
+        description: "The band briefly changes its name to Amplifier and tours New Zealand, but audiences do not recognize the new name, and the tour struggles. The group changes its name back to The Exponents. (The Exponents, n.d.-b)",
         background: "linear-gradient(135deg, #4c3545, #150c12)"
     },
     {
@@ -171,21 +166,15 @@ const timelineData = [
     },
     {
         year: 1992,
-        title: "The Australian move",
-        description: "The band signs with Phonogram Records in Australia and relocates to Sydney to record its next album. Brian Jones leaves before the recording sessions, while Dave Dobbyn and Brent Williams contribute guitar parts. (The Exponents, n.d.-b)",
+        title: "new country, new personnel, new album",
+        description: "Bryan leaves the band, and new guitarists Dave Dobbyn and Brent Williams join. The band sign with Phonogram Records in Australia and relocated to Sydney to record their significantly rockier fifth album “Grassy Knoll” (The Exponents, n.d.).",
         background: "linear-gradient(135deg, #303b49, #0b0e12)"
     },
     {
         year: 1993,
-        title: "A rockier direction",
-        description: "The band develops a significantly rockier sound for its fifth studio album, Grassy Knoll, recorded in Sydney with guitar contributions from Dave Dobbyn and Brent Williams. (The Exponents, n.d.-b)",
+        title: "Hard to keep up ",
+        description: "Although the new album goes gold, it is hard to follow up the success of their prior album. The band has a very hard time breaking into the Australian music scene (The Exponents, n.d.).",
         background: "linear-gradient(135deg, #293c46, #0d1215)"
-    },
-    {
-        year: 1994,
-        title: "Grassy Knoll",
-        description: "Grassy Knoll is released in September. Although the album achieves gold status, it does not match the commercial success of Something Beginning With C, and the band struggles to break into the Australian market. (The Exponents, n.d.-b)",
-        background: "linear-gradient(135deg, #413b31, #12100c)"
     },
     {
         year: 1994,
@@ -206,12 +195,6 @@ const timelineData = [
         background: "linear-gradient(135deg, #303f3e, #0b1211)"
     },
     {
-        year: 1996,
-        title: "“Do You Feel in Love”",
-        description: "The Exponents release the single “Do You Feel in Love” in July, continuing their recording career after the success of their compilation album. (The Exponents, n.d.-b)",
-        background: "linear-gradient(135deg, #44364a, #110d14)"
-    },
-    {
         year: 1997,
         title: "Better Never Than Late",
         description: "After signing with Sony Music, the band releases its sixth studio album, Better Never Than Late, co-produced by Eddie Rayner and The Exponents. The album reaches No. 3 on the New Zealand album chart. (Hung Medien, n.d.; The Exponents, n.d.-b)",
@@ -219,13 +202,13 @@ const timelineData = [
     },
     {
         year: 1999,
-        title: "A changing lineup",
+        title: "Begining of the end",
         description: "David Gent takes a break from the band, and Steve Simpson joins on bass. (The Exponents, n.d.-b)",
         background: "linear-gradient(135deg, #403b4a, #121116)"
     },
     {
         year: 1999,
-        title: "Hello, Love You, Goodbye",
+        title: "The final album",
         description: "The band releases its final studio album, Hello, Love You, Goodbye, in December. It reaches No. 48 on the New Zealand album chart in January 2000. (Brown, 2013; Hung Medien, n.d.)",
         background: "linear-gradient(135deg, #453936, #120d0b)"
     },
@@ -235,12 +218,6 @@ const timelineData = [
         description: "The Exponents embark on their final New Zealand tour, titled Hello, Love You, Goodbye, before disbanding and bringing an 18-year journey to an end. (The Exponents, n.d.-b)",
         background: "linear-gradient(135deg, #292929, #080808)"
     },
-    {
-        year: 2002,
-        title: "A place in Nature’s Best",
-        description: "“Why Does Love Do This to Me?” is included in Nature’s Best, a collection celebrating New Zealand popular songs. In 2012, Nicholas Braae examines the song in his musicological analysis of the collection and the wider New Zealand popular music canon. (Braae, 2012)",
-        background: "linear-gradient(135deg, #54482f, #151109)"
-    }
 ];
 
 
