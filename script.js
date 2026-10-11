@@ -364,7 +364,7 @@ function startPlaying() {
         }
 
         nextYear();
-    }, 3500);
+    }, 7000);
 }
 
 function stopPlaying() {
