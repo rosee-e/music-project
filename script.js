@@ -22,7 +22,7 @@ const timelineData = [
     {
         year: 1981,
         title: "Aranui Tavern residency",
-        description: "Dance Exponents secure a residency at the Aranui Tavern in Christchurch, quoted by Brown (2013) describes as having “created a sensation.”",
+        description: "Dance Exponents secure a residency at the Aranui Tavern in Christchurch, which Brown (2013) describes as having “created a sensation.”",
         background: "linear-gradient(135deg, #3b493b, #101510)"
     },
     {
@@ -124,7 +124,7 @@ const timelineData = [
     {
         year: 1990,
         title: "The band returns",
-        description: "Aftera rough few years in Britain, the band returns to New Zealand following interest from PolyGram Records. (Brown, 2013)",
+        description: "After a rough few years in Britain, the band returns to New Zealand following interest from PolyGram Records. (Brown, 2013)",
         background: "linear-gradient(135deg, #314339, #0c120e)"
     },
     {
@@ -201,7 +201,7 @@ const timelineData = [
     },
     {
         year: 1999,
-        title: "Begining of the end",
+        title: "Beginning of the end",
         description: "David Gent takes a break from the band, and Steve Simpson joins on bass. (The Exponents, n.d.-b)",
         background: "linear-gradient(135deg, #403b4a, #121116)"
     },
