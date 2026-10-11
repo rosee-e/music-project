@@ -728,4 +728,11 @@ footer {
         line-height: 1.3;
     }
 }
+.artwork {
+    background: #181818 !important;
+}
+
+.event-image {
+    background: #181818;
+}
 
