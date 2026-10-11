@@ -1,308 +1,247 @@
+
 /* =========================================
-   THE EXPONENTS — 1981–2001
+   THE EXPONENTS — 1981–2002
    Main JavaScript
    ========================================= */
 
-
 /* ---------- Timeline data ---------- */
 
-const timelineData = {
-
-    1981: {
-        title: "Dance Exponents form in Christchurch",
-        description:
-            "The band forms in Christchurch, beginning a two-decade journey through New Zealand's rock music scene.",
-        location: "CHRISTCHURCH, NEW ZEALAND",
-        category: "FORMATION",
-        why:
-            "The formation of Dance Exponents marks the beginning of the band's story and places them within Christchurch's developing rock scene.",
-        sources:
-            "The Exponents — Official Band History",
-        background:
-            "linear-gradient(135deg, #303030, #101010)"
+const timelineData = [
+    {
+        year: 1981,
+        title: "The beginning",
+        description: "After their first band breaks up, singer Jordan Luck and Brian Jones move with their friend Steve Cowan from Timaru to Christchurch, where they meet David Gent and Michael “Harry” Harallambi. Dance Exponents are born! (The Exponents, n.d.-b)",
+        background: "linear-gradient(135deg, #303030, #101010)"
     },
-
-    1982: {
-        title: "Victoria breaks through",
-        description:
-            "The band's debut single Victoria becomes their first major chart success, reaching No. 6 in New Zealand.",
-        location: "NEW ZEALAND",
-        category: "BREAKTHROUGH",
-        why:
-            "Victoria establishes Dance Exponents as a significant new name in New Zealand music.",
-        sources:
-            "The Exponents — Official History; NZ Music Hall of Fame",
-        background:
-            "linear-gradient(135deg, #493b31, #15100d)"
+    {
+        year: 1981,
+        title: "The first gig — 15 October",
+        description: "The band plays its first gig at Christchurch’s Hillsborough Tavern on Jordan Luck’s 20th birthday and Steve Cowan’s 22nd birthday. (The Exponents, n.d.-b)",
+        background: "linear-gradient(135deg, #493b31, #15100d)"
     },
-
-    1983: {
-        title: "The band's sound develops",
-        description:
-            "Dance Exponents continue building their reputation through recording and live performances around New Zealand.",
-        location: "NEW ZEALAND",
-        category: "DEVELOPMENT",
-        why:
-            "This period shows the transition from promising Christchurch band to established national act.",
-        sources:
-            "Rip It Up, November 1983",
-        background:
-            "linear-gradient(135deg, #293c46, #0d1215)"
+    {
+        year: 1981,
+        title: "Aranui Tavern residency",
+        description: "Dance Exponents secure a residency at the Aranui Tavern in Christchurch, which Brown (2013) describes as having “created a sensation.”",
+        background: "linear-gradient(135deg, #3b493b, #101510)"
     },
-
-    1984: {
-        title: "Prayers Be Answered",
-        description:
-            "The Exponents' second album becomes a major success and wins Album of the Year at the New Zealand Music Awards.",
-        location: "NEW ZEALAND",
-        category: "SUCCESS",
-        why:
-            "The album confirms that the band has moved beyond a local success and become one of New Zealand's leading rock acts.",
-        sources:
-            "NZ Music Hall of Fame; The Exponents — Official History",
-        background:
-            "linear-gradient(135deg, #57402d, #16100b)"
+    {
+        year: 1982,
+        title: "Signed to Mushroom Records",
+        description: "Performing for fewer than six months, the band catches the attention of former Split Enz member Mike Chunn, who signs them as Mushroom Records NZ’s second signing. (Brown, 2013; Higgins, 1982)",
+        background: "linear-gradient(135deg, #44364a, #110d14)"
     },
-
-    1985: {
-        title: "Building a national audience",
-        description:
-            "The band continues releasing music and performing throughout New Zealand, strengthening its growing audience.",
-        location: "NEW ZEALAND",
-        category: "TOURING",
-        why:
-            "Regular performances and recordings helped establish the band's national presence.",
-        sources:
-            "The Exponents — Official History",
-        background:
-            "linear-gradient(135deg, #403b4a, #121116)"
+    {
+        year: 1982,
+        title: "“Victoria” released",
+        description: "The band releases its debut single, “Victoria,” a song about an abusive relationship. (Brown, 2013)",
+        background: "linear-gradient(135deg, #493b31, #15100d)"
     },
-
-    1986: {
-        title: "A changing musical direction",
-        description:
-            "The band's music continues to develop as they move through the middle of the decade.",
-        location: "NEW ZEALAND",
-        category: "DEVELOPMENT",
-        why:
-            "The middle of the 1980s represents an important period of experimentation and development.",
-        sources:
-            "AudioCulture — The Exponents",
-        background:
-            "linear-gradient(135deg, #3e4930, #10130c)"
+    {
+        year: 1982,
+        title: "“Victoria” reaches No. 6",
+        description: "“Victoria” reaches No. 6 on the New Zealand singles chart, becoming the band’s first major chart success. (Hung Medien, n.d.)",
+        background: "linear-gradient(135deg, #542f2f, #160909)"
     },
-
-    1987: {
-        title: "The move to Britain",
-        description:
-            "The band moves to the United Kingdom in an attempt to establish themselves internationally.",
-        location: "LONDON, UK",
-        category: "INTERNATIONAL",
-        why:
-            "The move demonstrates the ambition of New Zealand musicians attempting to break into a much larger international market.",
-        sources:
-            "The Exponents — Official History; AudioCulture",
-        background:
-            "linear-gradient(135deg, #303b49, #0b0e12)"
+    {
+        year: 1982,
+        title: "Most Promising Group",
+        description: "Dance Exponents win Most Promising Group at the 1982 New Zealand Music Awards. (The New Zealand Music Hall of Fame Trust, n.d.)",
+        background: "linear-gradient(135deg, #57402d, #16100b)"
     },
-
-    1988: {
-        title: "The UK years",
-        description:
-            "The band works to establish itself in Britain while continuing to develop its music.",
-        location: "UNITED KINGDOM",
-        category: "INTERNATIONAL",
-        why:
-            "The British experience reveals the difficulty New Zealand bands faced when attempting to build an audience overseas.",
-        sources:
-            "The Exponents — Official History",
-        background:
-            "linear-gradient(135deg, #443e38, #12100e)"
+    {
+        year: 1982,
+        title: "Steve Cowan leaves",
+        description: "Steve Cowan leaves the band and returns to Timaru. Martin Morris temporarily replaces him. (Brown, 2013)",
+        background: "linear-gradient(135deg, #403b4a, #121116)"
     },
-
-    1989: {
-        title: "Back to New Zealand",
-        description:
-            "After the difficulties of the UK period, the band returns to New Zealand.",
-        location: "NEW ZEALAND",
-        category: "RETURN",
-        why:
-            "Returning home becomes an important turning point before the band's biggest period of mainstream success.",
-        sources:
-            "The Exponents — Official History",
-        background:
-            "linear-gradient(135deg, #314339, #0c120e)"
+    {
+        year: 1982,
+        title: "“Airway Spies”",
+        description: "The band releases “Airway Spies” following Cowan’s departure, marking an early change in the group’s lineup and sound. (The Exponents, n.d.-b)",
+        background: "linear-gradient(135deg, #293c46, #0d1215)"
     },
-
-    1990: {
-        title: "Dance Exponents become The Exponents",
-        description:
-            "After briefly performing as Amplifier, the band settles on the name The Exponents.",
-        location: "NEW ZEALAND",
-        category: "REINVENTION",
-        why:
-            "The name change marks a new phase for the band just before their biggest commercial success.",
-        sources:
-            "NZ Music Hall of Fame; The Exponents — Official History",
-        background:
-            "linear-gradient(135deg, #4c3545, #150c12)"
+    {
+        year: 1983,
+        title: "Playing with David Bowie",
+        description: "Dance Exponents support David Bowie at Western Springs in Auckland, at a concert recognised as the largest concert crowd in New Zealand history. (Brown, 2013)",
+        background: "linear-gradient(135deg, #303b49, #0b0e12)"
     },
-
-    1991: {
-        title: "Why Does Love Do This to Me?",
-        description:
-            "The single reaches No. 3 on the New Zealand singles chart and becomes one of the band's defining songs.",
-        location: "NEW ZEALAND",
-        category: "HIT SINGLE",
-        why:
-            "The song becomes central to the band's cultural legacy and eventually one of the most recognisable songs in New Zealand popular music.",
-        sources:
-            "NZ On Screen — Why Does Love Do This to Me?; The Exponents — Official History",
-        background:
-            "linear-gradient(135deg, #542f2f, #160909)"
+    {
+        year: 1983,
+        title: "Live at Mainstreet",
+        description: "The band’s live performance at Mainstreet Cabaret is released as an album and reaches No. 3 on the New Zealand charts. The performance is also filmed and broadcast on television and radio. (The Exponents, n.d.-b)",
+        background: "linear-gradient(135deg, #293c46, #0d1215)"
     },
-
-    1992: {
-        title: "Something Beginning with C reaches No. 1",
-        description:
-            "Something Beginning with C reaches the top of the New Zealand album chart, while Why Does Love Do This to Me? continues its impact.",
-        location: "NEW ZEALAND",
-        category: "NO. 1 ALBUM",
-        why:
-            "The early 1990s represent the band's peak mainstream period and their strongest connection with a national audience.",
-        sources:
-            "NZ Music Hall of Fame; The Exponents — Official History",
-        background:
-            "linear-gradient(135deg, #4a4630, #121109)"
+    {
+        year: 1983,
+        title: "Prayers Be Answered released",
+        description: "In December, the band releases its debut studio album, Prayers Be Answered. It includes re-recordings of “Victoria,” “Your Best Friend Loves Me Too,” “Poland” and “All I Can Do,” alongside “Know Your Own Heart” and “I’ll Say Goodbye (Even Though I’m Blue).” (Hung Medien, n.d.)",
+        background: "linear-gradient(135deg, #57402d, #16100b)"
     },
-
-    1993: {
-        title: "Mainstream success continues",
-        description:
-            "The Exponents remain an established part of New Zealand's popular music landscape.",
-        location: "NEW ZEALAND",
-        category: "MAINSTREAM",
-        why:
-            "The band's continued visibility demonstrates the lasting impact of their early-1990s success.",
-        sources:
-            "AudioCulture — The Exponents",
-        background:
-            "linear-gradient(135deg, #343d4d, #0d1015)"
+    {
+        year: 1984,
+        title: "Big successes",
+        description: "Prayers Be Answered stays in the New Zealand charts for nearly a year and achieves double-platinum sales. At the 1984 New Zealand Music Awards, the band wins Best Group and Album of the Year, while Jordan Luck wins the top male vocalist award. (The Exponents, n.d.-b; The New Zealand Music Hall of Fame Trust, n.d.)",
+        background: "linear-gradient(135deg, #57402d, #16100b)"
     },
-
-    1994: {
-        title: "A fixture of Kiwi rock",
-        description:
-            "The Exponents continue performing and recording as their songs become increasingly familiar to New Zealand audiences.",
-        location: "NEW ZEALAND",
-        category: "KIWI ROCK",
-        why:
-            "The band is increasingly associated with the broader idea of New Zealand rock music.",
-        sources:
-            "Shuker & Pickering — Kiwi Rock",
-        background:
-            "linear-gradient(135deg, #413b31, #12100c)"
+    {
+        year: 1984,
+        title: "“Sex and Agriculture”",
+        description: "Second guitarist Chris Sheehan joins the band. His first recording with the group is the darker single “Sex and Agriculture,” released in August. (Brown, 2013)",
+        background: "linear-gradient(135deg, #493b31, #15100d)"
     },
-
-    1995: {
-        title: "The legacy grows",
-        description:
-            "The Exponents continue performing across New Zealand.",
-        location: "NEW ZEALAND",
-        category: "LEGACY",
-        why:
-            "By the middle of the 1990s, the band's most successful songs had become firmly established in New Zealand popular culture.",
-        sources:
-            "AudioCulture — The Exponents",
-        background:
-            "linear-gradient(135deg, #303f3e, #0b1211)"
+    {
+        year: 1985,
+        title: "Personnel changes",
+        description: "Michael “Harry” Harallambi is dismissed from the band after the 1984 awards period. The group goes through several drummer changes, and the decision to remove Harallambi is later regarded by the band as a mistake. (Brown, 2013)",
+        background: "linear-gradient(135deg, #403b4a, #121116)"
     },
-
-    1996: {
-        title: "A national audience",
-        description:
-            "The band's music continues reaching audiences through radio, live performances and recordings.",
-        location: "NEW ZEALAND",
-        category: "POPULAR CULTURE",
-        why:
-            "The band's history increasingly becomes intertwined with New Zealand's mainstream music culture.",
-        sources:
-            "AudioCulture — The Exponents",
-        background:
-            "linear-gradient(135deg, #44364a, #110d14)"
+    {
+        year: 1985,
+        title: "Expectations",
+        description: "British producer Ian Taylor works with Dance Exponents on their second studio album, Expectations, recorded at Mandrill Studios in Auckland and released in May. (Brown, 2013)",
+        background: "linear-gradient(135deg, #44364a, #110d14)"
     },
-
-    1997: {
-        title: "The Exponents endure",
-        description:
-            "The band remains a familiar presence within New Zealand popular music.",
-        location: "NEW ZEALAND",
-        category: "ENDURANCE",
-        why:
-            "Longevity is an important part of understanding how the band's music became culturally significant.",
-        sources:
-            "The Exponents — Official History",
-        background:
-            "linear-gradient(135deg, #39432e, #0d1209)"
+    {
+        year: 1986,
+        title: "Amplifier",
+        description: "The band releases its third studio album, Amplifier. It receives a more moderate response than Prayers Be Answered, and drummer Eddie Olson later leaves the group. (The Exponents, n.d.-b)",
+        background: "linear-gradient(135deg, #3e4930, #10130c)"
     },
-
-    1998: {
-        title: "Approaching the end",
-        description:
-            "After almost two decades together, the band's original period draws toward its conclusion.",
-        location: "NEW ZEALAND",
-        category: "LATE PERIOD",
-        why:
-            "The end of the original period provides a contrast with the lasting popularity of the band's music.",
-        sources:
-            "The Exponents — Official History",
-        background:
-            "linear-gradient(135deg, #453936, #120d0b)"
+    {
+        year: 1987,
+        title: "The overseas gamble",
+        description: "Dance Exponents move to Britain to try to break into the UK music market. (The New Zealand Music Hall of Fame Trust, n.d.)",
+        background: "linear-gradient(135deg, #303b49, #0b0e12)"
     },
-
-    1999: {
-        title: "The band breaks up",
-        description:
-            "The Exponents break up after nearly two decades of music-making.",
-        location: "NEW ZEALAND",
-        category: "BREAKUP",
-        why:
-            "The breakup closes the main chapter of the band's history while their most successful songs continue to live on.",
-        sources:
-            "The Exponents — Official History",
-        background:
-            "linear-gradient(135deg, #292929, #080808)"
+    {
+        year: "1987–1990",
+        title: "The struggle in Britain",
+        description: "The band struggles to establish itself in Britain, playing to New Zealand expatriate communities and taking day jobs to survive. The UK period lasts around four frustrating years. (Brown, 2013; The Exponents, n.d.-b)",
+        background: "linear-gradient(135deg, #443e38, #12100e)"
     },
-
-    2000: {
-        title: "Songs outlive the band",
-        description:
-            "Although the band is no longer together, The Exponents' music continues to be heard and remembered across New Zealand.",
-        location: "NEW ZEALAND",
-        category: "LEGACY",
-        why:
-            "The story shifts from the band's active career toward the cultural life of its music.",
-        sources:
-            "Braae — The paths of New Zealand popular music through Nature's Best",
-        background:
-            "linear-gradient(135deg, #3b3b3b, #0d0d0d)"
+    {
+        year: "1987–1990",
+        title: "A missed record deal",
+        description: "CBS Records shows interest after hearing the band’s demos and performances. A showcase for A&R director Muff Winwood goes badly; Brown writes that “the sound was messy and so was Luck” (2013, para. 16), and CBS signs another band instead.",
+        background: "linear-gradient(135deg, #453936, #120d0b)"
     },
-
-    2001: {
-        title: "Why Does Love Do This to Me? enters Nature's Best",
-        description:
-            "Why Does Love Do This to Me? is included in Nature's Best, helping cement the song's place in the canon of New Zealand popular music.",
-        location: "NEW ZEALAND",
-        category: "CULTURAL LEGACY",
-        why:
-            "The song's inclusion demonstrates how a band formed in Christchurch became part of the wider story and memory of New Zealand music.",
-        sources:
-            "Braae — The paths of New Zealand popular music through Nature's Best",
-        background:
-            "linear-gradient(135deg, #54482f, #151109)"
+    {
+        year: 1990,
+        title: "The band returns",
+        description: "After several difficult years in Britain, the band returns to New Zealand following interest from PolyGram Records. (Brown, 2013)",
+        background: "linear-gradient(135deg, #314339, #0c120e)"
+    },
+    {
+        year: 1990,
+        title: "The band reunites",
+        description: "Four original members reunite, including drummer Michael “Harry” Harallambi. (The Exponents, n.d.-b)",
+        background: "linear-gradient(135deg, #39432e, #0d1209)"
+    },
+    {
+        year: 1990,
+        title: "A name-change misstep",
+        description: "The band briefly changes its name to Amplifier and tours New Zealand, but audiences do not recognise the new name and the tour struggles. The group changes its name back to The Exponents. (The Exponents, n.d.-b)",
+        background: "linear-gradient(135deg, #4c3545, #150c12)"
+    },
+    {
+        year: 1991,
+        title: "“Why Does Love Do This to Me?”",
+        description: "The single is released in April and reaches No. 3 on the New Zealand singles chart, becoming one of the band’s defining songs. (Hung Medien, n.d.)",
+        background: "linear-gradient(135deg, #542f2f, #160909)"
+    },
+    {
+        year: 1991,
+        title: "“Who Loves Who the Most?”",
+        description: "The band releases another major single, “Who Loves Who the Most?”, which also reaches No. 3 on the New Zealand singles chart. (Hung Medien, n.d.)",
+        background: "linear-gradient(135deg, #493b31, #15100d)"
+    },
+    {
+        year: 1992,
+        title: "Something Beginning With C",
+        description: "The Exponents release Something Beginning With C, their first No. 1 album. It features major songs including “Why Does Love Do This to Me?” and “Who Loves Who the Most?” and eventually achieves triple-platinum status. (Brown, 2013; The New Zealand Music Hall of Fame Trust, n.d.)",
+        background: "linear-gradient(135deg, #4a4630, #121109)"
+    },
+    {
+        year: 1992,
+        title: "“Whatever Happened to Tracey?”",
+        description: "“Whatever Happened to Tracey?” becomes another Top 10 single, reaching No. 6 on the New Zealand chart. (Hung Medien, n.d.)",
+        background: "linear-gradient(135deg, #542f2f, #160909)"
+    },
+    {
+        year: 1992,
+        title: "The Australian move",
+        description: "The band signs with Phonogram Records in Australia and relocates to Sydney to record its next album. Brian Jones leaves before the recording sessions, while Dave Dobbyn and Brent Williams contribute guitar parts. (The Exponents, n.d.-b)",
+        background: "linear-gradient(135deg, #303b49, #0b0e12)"
+    },
+    {
+        year: 1993,
+        title: "A rockier direction",
+        description: "The band develops a significantly rockier sound for its fifth studio album, Grassy Knoll, recorded in Sydney with guitar contributions from Dave Dobbyn and Brent Williams. (The Exponents, n.d.-b)",
+        background: "linear-gradient(135deg, #293c46, #0d1215)"
+    },
+    {
+        year: 1994,
+        title: "Grassy Knoll",
+        description: "Grassy Knoll is released in September. Although the album achieves gold status, it does not match the commercial success of Something Beginning With C, and the band struggles to break into the Australian market. (The Exponents, n.d.-b)",
+        background: "linear-gradient(135deg, #413b31, #12100c)"
+    },
+    {
+        year: 1994,
+        title: "New blood",
+        description: "Australian guitarist Dave “Duck” Barraclough joins the band as a guitarist and songwriting partner. (Brown, 2013)",
+        background: "linear-gradient(135deg, #3e4930, #10130c)"
+    },
+    {
+        year: 1995,
+        title: "“La La Lulu”",
+        description: "“La La Lulu,” Barraclough’s first contribution to the band’s recorded material, is released as a single in October alongside “Summer You Never Meant.” (Brown, 2013)",
+        background: "linear-gradient(135deg, #493b31, #15100d)"
+    },
+    {
+        year: 1995,
+        title: "Once Bitten, Twice Bitten",
+        description: "The band releases Once Bitten, Twice Bitten: The Singles 1981–1995, a compilation of its earlier hits. The album reaches No. 1 and achieves five-times-platinum status. (The Exponents, n.d.-b)",
+        background: "linear-gradient(135deg, #303f3e, #0b1211)"
+    },
+    {
+        year: 1996,
+        title: "“Do You Feel in Love”",
+        description: "The Exponents release the single “Do You Feel in Love” in July, continuing their recording career after the success of their compilation album. (The Exponents, n.d.-b)",
+        background: "linear-gradient(135deg, #44364a, #110d14)"
+    },
+    {
+        year: 1997,
+        title: "Better Never Than Late",
+        description: "After signing with Sony Music, the band releases its sixth studio album, Better Never Than Late, co-produced by Eddie Rayner and The Exponents. The album reaches No. 3 on the New Zealand album chart. (Hung Medien, n.d.; The Exponents, n.d.-b)",
+        background: "linear-gradient(135deg, #39432e, #0d1209)"
+    },
+    {
+        year: 1999,
+        title: "A changing lineup",
+        description: "David Gent takes a break from the band, and Steve Simpson joins on bass. (The Exponents, n.d.-b)",
+        background: "linear-gradient(135deg, #403b4a, #121116)"
+    },
+    {
+        year: 1999,
+        title: "Hello, Love You, Goodbye",
+        description: "The band releases its final studio album, Hello, Love You, Goodbye, in December. It reaches No. 48 on the New Zealand album chart in January 2000. (Brown, 2013; Hung Medien, n.d.)",
+        background: "linear-gradient(135deg, #453936, #120d0b)"
+    },
+    {
+        year: 1999,
+        title: "The end",
+        description: "The Exponents embark on their final New Zealand tour, titled Hello, Love You, Goodbye, before disbanding and bringing an 18-year journey to an end. (The Exponents, n.d.-b)",
+        background: "linear-gradient(135deg, #292929, #080808)"
+    },
+    {
+        year: 2002,
+        title: "A place in Nature’s Best",
+        description: "“Why Does Love Do This to Me?” is included in Nature’s Best, a collection celebrating New Zealand popular songs. In 2012, Nicholas Braae examines the song in his musicological analysis of the collection and the wider New Zealand popular music canon. (Braae, 2012)",
+        background: "linear-gradient(135deg, #54482f, #151109)"
     }
-
-};
+];
 
 
 /* ---------- Get HTML elements ---------- */
@@ -316,7 +255,6 @@ const descriptionElement = document.getElementById("eventDescription");
 const timelineElement = document.getElementById("timeline");
 const currentTimelineYearElement =
     document.getElementById("currentTimelineYear");
-
 const artworkElement = document.getElementById("artwork");
 
 const previousButton = document.getElementById("previousButton");
@@ -324,84 +262,58 @@ const nextButton = document.getElementById("nextButton");
 const playButton = document.getElementById("playButton");
 
 
-/* ---------- Current year ---------- */
+/* ---------- Current event ---------- */
 
-let currentYear = 1981;
-
+let currentIndex = 0;
 let playing = false;
-
 let playInterval;
 
 
 /* ---------- Update timeline ---------- */
 
-function updateTimeline(year) {
+function updateTimeline(index) {
+    currentIndex = Number(index);
 
-    currentYear = Number(year);
-
-    const data = timelineData[currentYear];
+    const data = timelineData[currentIndex];
 
     if (!data) {
         return;
     }
 
-
-    /* Update text */
-
-    yearElement.textContent = currentYear;
-
-    artworkYearElement.textContent = currentYear;
-
-    currentTimelineYearElement.textContent = currentYear;
+    // Update year and event information
+    yearElement.textContent = data.year;
+    artworkYearElement.textContent = data.year;
+    currentTimelineYearElement.textContent = data.year;
 
     titleElement.textContent = data.title;
-
     descriptionElement.textContent = data.description;
 
-    /* Update artwork */
-
+    // Update artwork background
     artworkElement.style.background = data.background;
 
-
-    /* Restart animation */
-
+    // Restart artwork animation
     artworkElement.classList.remove("fade");
-
     void artworkElement.offsetWidth;
-
     artworkElement.classList.add("fade");
 
-
-    /* Update slider */
-
-    timelineElement.value = currentYear;
+    // Update slider position
+    timelineElement.value = currentIndex;
 }
 
 
-/* ---------- Next year ---------- */
+/* ---------- Next and previous events ---------- */
 
 function nextYear() {
-
-    if (currentYear < 2001) {
-
-        updateTimeline(currentYear + 1);
-
+    if (currentIndex < timelineData.length - 1) {
+        updateTimeline(currentIndex + 1);
     } else {
-
         stopPlaying();
-
     }
 }
 
-
-/* ---------- Previous year ---------- */
-
 function previousYear() {
-
-    if (currentYear > 1981) {
-
-        updateTimeline(currentYear - 1);
-
+    if (currentIndex > 0) {
+        updateTimeline(currentIndex - 1);
     }
 }
 
@@ -409,50 +321,36 @@ function previousYear() {
 /* ---------- Play / pause ---------- */
 
 function startPlaying() {
-
     if (playing) {
         return;
     }
 
     playing = true;
-
     playButton.textContent = "⏸";
 
     playInterval = setInterval(() => {
-
-        if (currentYear >= 2001) {
-
+        if (currentIndex >= timelineData.length - 1) {
             stopPlaying();
-
             return;
         }
 
         nextYear();
-
-    }, 2500);
+    }, 3500);
 }
 
 
 function stopPlaying() {
-
     playing = false;
-
     playButton.textContent = "▶";
-
     clearInterval(playInterval);
 }
 
 
 function togglePlaying() {
-
     if (playing) {
-
         stopPlaying();
-
     } else {
-
         startPlaying();
-
     }
 }
 
@@ -460,72 +358,61 @@ function togglePlaying() {
 /* ---------- Button events ---------- */
 
 nextButton.addEventListener("click", () => {
-
     stopPlaying();
-
     nextYear();
-
 });
-
 
 previousButton.addEventListener("click", () => {
-
     stopPlaying();
-
     previousYear();
-
 });
 
-
 playButton.addEventListener("click", () => {
-
     togglePlaying();
-
 });
 
 
 /* ---------- Timeline slider ---------- */
 
+timelineElement.min = 0;
+timelineElement.max = timelineData.length - 1;
+timelineElement.step = 1;
+timelineElement.value = 0;
+
 timelineElement.addEventListener("input", () => {
-
     stopPlaying();
-
     updateTimeline(timelineElement.value);
-
 });
 
 
 /* ---------- Keyboard controls ---------- */
 
 document.addEventListener("keydown", (event) => {
+    // Avoid interfering with keyboard input in form fields
+    if (
+        event.target instanceof HTMLInputElement ||
+        event.target instanceof HTMLTextAreaElement
+    ) {
+        return;
+    }
 
     if (event.key === "ArrowRight") {
-
         stopPlaying();
-
         nextYear();
-
     }
 
     if (event.key === "ArrowLeft") {
-
         stopPlaying();
-
         previousYear();
-
     }
 
     if (event.key === " ") {
-
         event.preventDefault();
-
         togglePlaying();
-
     }
-
 });
 
 
 /* ---------- Start ---------- */
 
-updateTimeline(1981);
+updateTimeline(0);
