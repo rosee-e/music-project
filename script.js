@@ -1,8 +1,8 @@
 
-/* 
+/*
    THE EXPONENTS — 1981–2002
    Main JavaScript
- */
+*/
 
 /* Timeline data */
 
@@ -216,8 +216,49 @@ const timelineData = [
         title: "The end",
         description: "The Exponents embark on their final New Zealand tour, titled Hello, Love You, Goodbye, before disbanding and bringing an 18-year journey to an end. (The Exponents, n.d.-b)",
         background: "linear-gradient(135deg, #292929, #080808)"
-    },
+    }
 ];
+
+
+/* ---------- Image mapping and citations ---------- */
+
+const yearImages = {
+    1981: "image1.jpg",
+    1982: "image2.jpg",
+    1983: "image3.jpg",
+    1984: "image4.jpg",
+    1985: "image5.png",
+    1986: "image6.png",
+    1987: "image7.jpg",
+    1990: "image8.jpg",
+    1991: "image9.jpg",
+    1992: "image10.jpg",
+    1993: "image11.jpg",
+    1994: "image12.jpg",
+    1995: "image13.jpg",
+    1997: "image14.jpg",
+    1999: "image15.jpg"
+};
+
+const defaultImageCitation = "Image: AudioCulture (Brown, 2013)";
+
+const imageCitations = {
+    1985: "Album artwork: Expectations (Dance Exponents, 1985), via Spotify.",
+    1986: "Album artwork: Amplifier (Dance Exponents, 1986), via Spotify."
+};
+
+function getImageDetails(data) {
+    const yearText = String(data.year);
+    const isMultiYear = yearText.includes("1987") && yearText.includes("1990");
+
+    const imageYear = isMultiYear ? 1987 : Number(data.year);
+    const imageFile = yearImages[imageYear];
+
+    return {
+        src: imageFile ? "images/" + imageFile : "",
+        citation: imageCitations[imageYear] || defaultImageCitation
+    };
+}
 
 
 /* ---------- Get HTML elements ---------- */
@@ -232,6 +273,9 @@ const timelineElement = document.getElementById("timeline");
 const currentTimelineYearElement =
     document.getElementById("currentTimelineYear");
 const artworkElement = document.getElementById("artwork");
+
+const eventImageElement = document.getElementById("eventImage");
+const imageCitationElement = document.getElementById("imageCitation");
 
 const previousButton = document.getElementById("previousButton");
 const nextButton = document.getElementById("nextButton");
@@ -266,6 +310,19 @@ function updateTimeline(index) {
 
     // Update artwork background
     artworkElement.style.background = data.background;
+
+    // Update image and citation
+    const imageDetails = getImageDetails(data);
+
+    if (imageDetails.src) {
+        eventImageElement.src = imageDetails.src;
+        eventImageElement.alt = "The Exponents artwork for " + data.year;
+        eventImageElement.style.display = "block";
+        imageCitationElement.textContent = imageDetails.citation;
+    } else {
+        eventImageElement.style.display = "none";
+        imageCitationElement.textContent = "";
+    }
 
     // Restart artwork animation
     artworkElement.classList.remove("fade");
@@ -314,13 +371,11 @@ function startPlaying() {
     }, 3500);
 }
 
-
 function stopPlaying() {
     playing = false;
     playButton.textContent = "▶";
     clearInterval(playInterval);
 }
-
 
 function togglePlaying() {
     if (playing) {
@@ -364,7 +419,6 @@ timelineElement.addEventListener("input", () => {
 /* ---------- Keyboard controls ---------- */
 
 document.addEventListener("keydown", (event) => {
-    // Avoid interfering with keyboard input in form fields
     if (
         event.target instanceof HTMLInputElement ||
         event.target instanceof HTMLTextAreaElement
