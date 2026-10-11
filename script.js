@@ -324,10 +324,6 @@ function updateTimeline(index) {
         imageCitationElement.textContent = "";
     }
 
-    // Restart artwork animation
-    artworkElement.classList.remove("fade");
-    void artworkElement.offsetWidth;
-    artworkElement.classList.add("fade");
 
     // Update slider position
     timelineElement.value = currentIndex;
