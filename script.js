@@ -309,7 +309,7 @@ function updateTimeline(index) {
     descriptionElement.textContent = data.description;
 
     // Update artwork background
-    artworkElement.style.background = data.background;
+    artworkElement.style.background = "#181818";
 
     // Update image and citation
     const imageDetails = getImageDetails(data);
