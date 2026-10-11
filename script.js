@@ -119,7 +119,6 @@ const timelineData = [
         year: "1987–1990",
         title: "What could have been",
         description: "CBS records (now Sony) show interest in signing after hearing their demos and performances. They perform a showcase to CBS A&R director Muff Winwood. The “sound was messy and so was Luck” (Brown,  2013, para. 16), resulting in the record going to a different band instead (The Exponents, n.d.)",
-",
         background: "linear-gradient(135deg, #453936, #120d0b)"
     },
     {
